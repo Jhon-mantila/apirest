@@ -27,3 +27,12 @@ email_sufigo
 password_sufigo
 token_sufigo
 token_exp_sufigo
+
+nombre
+tipo persona
+tipo_cargo
+departamento
+municipio y concidencia
+
+//llamar parametros no todos
+file?select=id_file,departament_file

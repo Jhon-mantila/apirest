@@ -25,10 +25,13 @@ if(isset($_GET["id"]) && isset($_GET["nameId"])){
     array_push($columns, $value);
    }
 
+   array_push($columns, $_GET["nameId"]);
+   $columns = array_unique($columns);
    //echo '<pre>';print_r($columns);echo '</pre>';
 
    //validar tablas y columnas
    if(empty(Conexion::getColumnsData($table, $columns))){
+
 
     $json = array(
         'status' => 400,

@@ -1,6 +1,7 @@
 <?php 
 require_once "modelos/get.model.php";
 require_once "modelos/post.model.php";
+require_once "modelos/put.model.php";
 require_once "modelos/connection.php";
 require_once "vendor/autoload.php";
 use Firebase\JWT\JWT;
@@ -20,7 +21,7 @@ class PostController{
 
             $response = PostModel::postRegister($table, $data);
             $return = new PostController();
-            $return->fncResponse($response, null);
+            $return->fncResponse($response, null, $suffix);
         }
     }
 
@@ -41,35 +42,54 @@ class PostController{
                 $token = Conexion::jwt($response[0]->id_client, $response[0]->email_client);
 
                 $jwt = JWT::encode($token, "lkjflsafhjeuwornxnqegmncx", 'HS256');
-                //echo '<pre>';print_r($jwt);echo '</pre>';
+                ///echo '<pre>';print_r($jwt);echo '</pre>';
 
+                
                 //Actualizar base de datos
                 $data = array(
                     "token_".$suffix => $jwt,
                     "token_exp_".$suffix => $token["exp"]
                 );
 
-                //$update = 
+                $update = PutModel::putData($table, $data, $response[0]->{"id_".$suffix}, "id_".$suffix);
+
+                //echo '<pre>';print_r($update);echo '</pre>';
+
+                if(isset($update["Results"]) && $update["Results"] == "The proccess was successful"){
+
+                    $response[0]->{"token_".$suffix} = $jwt;
+                    $response[0]->{"token_exp_".$suffix} = $token["exp"];
+
+                    $return = new PostController();
+                    $return->fncResponse($response, null, $suffix);
+                }
 
             }else{
                 $response = null;
                 $return = new PostController();
-                $return->fncResponse($response, "Wrong Password");
+                $return->fncResponse($response, "Wrong Password", $suffix);
             }
 
         }else{
             
             $response = null;
             $return = new PostController();
-            $return->fncResponse($response, "Wrong Email");
+            $return->fncResponse($response, "Wrong Email", $suffix);
 
         }//email
     }
 
-    public function fncResponse($response, $error){
+    public function fncResponse($response, $error, $suffix){
         
         if(!empty($response)){
            
+            //Quitar contraseña de la respuesta y otro campos
+
+            if(isset($response[0]->{"password_".$suffix}) && isset($response[0]->{"name_".$suffix})){
+                unset($response[0]->{"password_".$suffix});
+                unset($response[0]->{"name_".$suffix});
+            }
+            
             $json = array(
                 'status' => 200,
                 'result' => $response
