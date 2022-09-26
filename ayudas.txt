@@ -1,0 +1,29 @@
+para el virtual
+C:\xampp\apache\conf\extra\httpd-vhosts
+
+para volver un endpoint
+C:\Windows\System32\drivers\etc\hosts
+
+recomendaciones
+tablas en plural
+nombre de las columnas deben terminar  en sigular con el nombre en singular
+usar nombres en ingles
+
+tabla: categories
+columnas
+id_category
+date_created_category
+date_updated_category
+
+para tablas relacionadas
+
+tabla: products
+relacion categgories: id_category_product
+relacion stores: id_store_product
+
+autentifiación
+
+email_sufigo
+password_sufigo
+token_sufigo
+token_exp_sufigo
