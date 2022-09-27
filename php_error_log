@@ -2,3 +2,53 @@ No existe el 5001
 No existe el 5001
 No existe el 5001[26-Sep-2022 18:54:30 Europe/Berlin] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\apirest\controlador\post.cotroller.php on line 61
 [26-Sep-2022 18:56:36 Europe/Berlin] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\apirest\controlador\post.cotroller.php on line 61
+[26-Sep-2022 21:35:36 Europe/Berlin] PHP Notice:  Undefined variable: HTTP_RAW_POST_DATA in C:\xampp\htdocs\apirest\rutas\services\post.php on line 7
+[26-Sep-2022 21:35:56 Europe/Berlin] PHP Notice:  Undefined variable: _HTTP_RAW_POST_DATA in C:\xampp\htdocs\apirest\rutas\services\post.php on line 7
+[26-Sep-2022 21:36:15 Europe/Berlin] PHP Notice:  Undefined variable: HTTP_RAW_POST_DATA in C:\xampp\htdocs\apirest\rutas\services\post.php on line 7
+[26-Sep-2022 21:45:59 Europe/Berlin] PHP Notice:  Undefined variable: columns in C:\xampp\htdocs\apirest\rutas\services\post.php on line 13
+[26-Sep-2022 21:45:59 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\apirest\modelos\connection.php on line 55
+[26-Sep-2022 21:45:59 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\apirest\modelos\connection.php on line 62
+[26-Sep-2022 21:45:59 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\apirest\modelos\connection.php on line 62
+[26-Sep-2022 21:45:59 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\apirest\modelos\connection.php on line 62
+[26-Sep-2022 21:45:59 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\apirest\modelos\connection.php on line 62
+[26-Sep-2022 21:45:59 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\apirest\modelos\connection.php on line 62
+[26-Sep-2022 21:45:59 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\apirest\modelos\connection.php on line 62
+[26-Sep-2022 21:45:59 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\apirest\modelos\connection.php on line 62
+[26-Sep-2022 21:45:59 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\apirest\modelos\connection.php on line 62
+[26-Sep-2022 21:45:59 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\apirest\modelos\connection.php on line 70
+[26-Sep-2022 22:24:27 Europe/Berlin] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\xampp\htdocs\apirest\controlador\post.cotroller.php on line 117
+[26-Sep-2022 23:49:22 Europe/Berlin] PHP Notice:  Undefined variable: token in C:\xampp\htdocs\apirest\rutas\services\post.php on line 54
+[27-Sep-2022 02:04:02 Europe/Berlin] PHP Notice:  Undefined index: email_client in C:\xampp\htdocs\apirest\controlador\post.cotroller.php on line 41
+[27-Sep-2022 02:04:58 Europe/Berlin] PHP Notice:  Undefined index: password_client in C:\xampp\htdocs\apirest\controlador\post.cotroller.php on line 46
+[27-Sep-2022 02:38:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot pass parameter 2 by reference in C:\xampp\htdocs\apirest\modelos\post.model.php:26
+Stack trace:
+#0 C:\xampp\htdocs\apirest\controlador\post.cotroller.php(31): PostModel::postData('clients', Array, 'client')
+#1 C:\xampp\htdocs\apirest\rutas\services\post.php(40): PostController::postRegister('clients', Array, 'client')
+#2 C:\xampp\htdocs\apirest\rutas\routes.php(35): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\apirest\controlador\routes.controller.php(7): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\apirest\index.php(26): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\apirest\modelos\post.model.php on line 26
+[27-Sep-2022 02:38:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot pass parameter 2 by reference in C:\xampp\htdocs\apirest\modelos\post.model.php:26
+Stack trace:
+#0 C:\xampp\htdocs\apirest\controlador\post.cotroller.php(31): PostModel::postData('clients', Array, 'client')
+#1 C:\xampp\htdocs\apirest\rutas\services\post.php(40): PostController::postRegister('clients', Array, 'client')
+#2 C:\xampp\htdocs\apirest\rutas\routes.php(35): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\apirest\controlador\routes.controller.php(7): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\apirest\index.php(26): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\apirest\modelos\post.model.php on line 26
+[27-Sep-2022 02:45:53 Europe/Berlin] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\apirest\modelos\post.model.php on line 32
+[27-Sep-2022 03:06:31 Europe/Berlin] PHP Warning:  Illegal string offset 'id_client' in C:\xampp\htdocs\apirest\modelos\post.model.php on line 39
+[27-Sep-2022 03:06:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type PDOStatement as array in C:\xampp\htdocs\apirest\modelos\post.model.php:39
+Stack trace:
+#0 C:\xampp\htdocs\apirest\controlador\post.cotroller.php(13): PostModel::postData('clients', Array, 'client')
+#1 C:\xampp\htdocs\apirest\rutas\services\post.php(61): PostController::postData('clients', Array, 'client')
+#2 C:\xampp\htdocs\apirest\rutas\routes.php(35): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\apirest\controlador\routes.controller.php(7): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\apirest\index.php(26): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\apirest\modelos\post.model.php on line 39
+[27-Sep-2022 03:30:15 Europe/Berlin] PHP Notice:  Undefined index: suffix in C:\xampp\htdocs\apirest\rutas\services\get.php on line 28
+
+No existe el 5010

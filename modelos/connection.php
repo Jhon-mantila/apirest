@@ -1,8 +1,10 @@
 <?php
+require_once "modelos/get.model.php";
 //require_once "vendor/autoload.php";
 //use Firebase\JWT\JWT;
 
 class Conexion{
+    
     //Información de la base de datos
     static public function infoDatabase(){
 
@@ -19,10 +21,11 @@ class Conexion{
 
         try{
 
+
             $link = new PDO(
                 "mysql:host=localhost;dbname=". Conexion::infoDatabase()["database"], 
                 Conexion::infoDatabase()["user"],
-                Conexion::infoDatabase()["pass"]   
+                Conexion::infoDatabase()["pass"]  
             );
 
             $link->exec("set names utf8");
@@ -93,6 +96,37 @@ class Conexion{
         //echo '<pre>';print_r($jwt);echo '</pre>';
         return $token;
 
+    }
+
+    //validar token de seguridad
+
+    static public function tokenValidate($token,$table,  $suffix){
+        //echo '<pre>';print_r($token);echo '</pre>'; 
+        //echo '<pre>';print_r($table);echo '</pre>'; 
+        //echo '<pre>';print_r($suffix);echo '</pre>'; 
+      
+        $user = GetModel::getDataFilter($table, "token_exp_".$suffix, "token_".$suffix, $token);
+       
+        //echo '<pre>';print_r($user);echo '</pre>';
+       
+        //return;
+        if(!empty($user)){
+            //validar si el token no ha expirado
+            $time = time();
+            if($time < $user[0]->{"token_exp_".$suffix} ){
+               
+                return "vigente_token";
+
+            }else{
+                
+                return "expiro_token";
+            }
+        }else{
+
+            return "no_existe_token";
+        }
+
+        return;
     }
 }
 ?>

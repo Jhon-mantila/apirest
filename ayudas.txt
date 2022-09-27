@@ -36,3 +36,11 @@ municipio y concidencia
 
 //llamar parametros no todos
 file?select=id_file,departament_file
+
+usuarios pruebas
+
+jessika@correo.com
+1234
+
+jhon.e.mantilla@gmail.com
+rasmuslerdorf

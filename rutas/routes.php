@@ -22,6 +22,8 @@ if(empty($routesArray)){
 
 if(!empty($routesArray) && isset($_SERVER['REQUEST_METHOD'])){
     //echo '<pre>';print_r($_SERVER['REQUEST_METHOD']);echo '</pre>';
+    //Separar tabla
+    $table = explode("?", $routesArray[1])[0];
     //Petición GET
     if($_SERVER['REQUEST_METHOD'] == "GET"){
 

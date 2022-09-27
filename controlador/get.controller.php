@@ -47,7 +47,8 @@ class GetController{
             $json = array(
                 'status' => 404,
                 'total' => 0,
-                'result' => 'No se encontraron resultados'
+                'result' => 'No se encontraron resultados',
+                'method' => 'get'
             );
         }
 

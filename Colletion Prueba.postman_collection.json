@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "661821ad-9b7f-4763-844c-4f2d91049405",
+		"name": "Colletion Prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17256748"
+	},
+	"item": [
+		{
+			"name": "GET - Selecionar con condiciones and",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/files?select=id_file,departament_file, name_file&linkTo=name_file,id_file&equalTo=Jorge Eliecer Coral Rivas_2&token&table",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"files"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_file,departament_file, name_file"
+						},
+						{
+							"key": "linkTo",
+							"value": "name_file,id_file"
+						},
+						{
+							"key": "equalTo",
+							"value": "Jorge Eliecer Coral Rivas_2"
+						},
+						{
+							"key": "token",
+							"value": null
+						},
+						{
+							"key": "table",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Selecionar conporcentaje",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/files?select=name_file,type_person_type,type_file,departament_file,city_file&name=Oneida Rayeth Pinto Perez&porcentaje=55&token&table",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"files"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "name_file,type_person_type,type_file,departament_file,city_file"
+						},
+						{
+							"key": "name",
+							"value": "Oneida Rayeth Pinto Perez"
+						},
+						{
+							"key": "porcentaje",
+							"value": "55"
+						},
+						{
+							"key": "token",
+							"value": null
+						},
+						{
+							"key": "table",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Seleccionar Datos especificos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/files?select=id_file,city_file&token&table",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"files"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_file,city_file"
+						},
+						{
+							"key": "token",
+							"value": null
+						},
+						{
+							"key": "table",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Selecionar por una sola condición",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/files?select=id_file,departament_file, name_file&linkTo=name_file&equalTo=Jorge Eliecer Coral Rivas&token&table",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"files"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_file,departament_file, name_file"
+						},
+						{
+							"key": "linkTo",
+							"value": "name_file"
+						},
+						{
+							"key": "equalTo",
+							"value": "Jorge Eliecer Coral Rivas"
+						},
+						{
+							"key": "token",
+							"value": null
+						},
+						{
+							"key": "table",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email_client",
+							"value": "jessika@correo.com",
+							"type": "text"
+						},
+						{
+							"key": "password_client",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "name_client",
+							"value": "jessika karime vallejo",
+							"type": "text"
+						},
+						{
+							"key": "date_created_client",
+							"value": "2022-09-26",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/clients?register=true&suffix=client",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"clients"
+					],
+					"query": [
+						{
+							"key": "register",
+							"value": "true"
+						},
+						{
+							"key": "suffix",
+							"value": "client"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST-insertar registros",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name_client",
+							"value": "Daniela",
+							"type": "text"
+						},
+						{
+							"key": "email_client",
+							"value": "Daniela@prueba.com",
+							"type": "text"
+						},
+						{
+							"key": "date_created_client",
+							"value": "2022-09-26",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/clients?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyMjU5OTMsImV4cCI6MTY2NDMxMjM5MywiZGF0YSI6eyJpZCI6IjE0IiwiZW1haWwiOiJqZXNzaWthQGNvcnJlby5jb20ifX0.zKy0Dn69LyFtjIuWd_uSD27ThxcJsKgeDObwfQUKcS0&table=clients&suffix=client",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"clients"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyMjU5OTMsImV4cCI6MTY2NDMxMjM5MywiZGF0YSI6eyJpZCI6IjE0IiwiZW1haWwiOiJqZXNzaWthQGNvcnJlby5jb20ifX0.zKy0Dn69LyFtjIuWd_uSD27ThxcJsKgeDObwfQUKcS0"
+						},
+						{
+							"key": "table",
+							"value": "clients"
+						},
+						{
+							"key": "suffix",
+							"value": "client"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - tablas",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "city_file",
+							"value": "Medellín",
+							"type": "text"
+						},
+						{
+							"key": "location_file",
+							"value": "Casa 2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/files?id=1&nameId=id_file&token&table",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"files"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "nameId",
+							"value": "id_file"
+						},
+						{
+							"key": "token",
+							"value": null
+						},
+						{
+							"key": "table",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Usuarios token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email_client",
+							"value": "jessika@correo.com",
+							"type": "text"
+						},
+						{
+							"key": "password_client",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/clients?login=true&suffix=client",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"clients"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "true"
+						},
+						{
+							"key": "suffix",
+							"value": "client"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

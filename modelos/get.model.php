@@ -24,7 +24,7 @@ class GetModel{
        
         $sql = "SELECT $select FROM files";
         
-       $stmt = Conexion::connect()->prepare($sql);
+        $stmt = Conexion::connect()->prepare($sql);
 
         $stmt->execute();
     
@@ -90,7 +90,7 @@ class GetModel{
 
         
         $campoToArray = explode(",", $campo);
-        $equalToArray = explode("_", $equal);
+        $equalToArray = explode(",", $equal);
         $campoToText = "";
 
         if(count($campoToArray)>0){

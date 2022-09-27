@@ -8,6 +8,15 @@ use Firebase\JWT\JWT;
 
 class PostController{
 
+    static public function postData($table, $data, $suffix){
+
+        $response = PostModel::postData($table, $data, $suffix);
+        //echo '<pre>';print_r($response);echo '</pre>';
+        $return = new PostController();
+        $return->fncResponse($response, null, null );
+
+    }
+
     //Peticion para registrar usuarios
     static public function postRegister($table,$data, $suffix){
 
@@ -19,7 +28,7 @@ class PostController{
             //echo '<pre>';print_r($data["password_".$suffix]);echo '</pre>';
             //return;
 
-            $response = PostModel::postRegister($table, $data);
+            $response = PostModel::postData($table, $data,$suffix);
             $return = new PostController();
             $return->fncResponse($response, null, $suffix);
         }
@@ -104,7 +113,8 @@ class PostController{
             }else{
                 $json = array(
                     'status' => 404,
-                    'result' => 'No se inserto registro'
+                    'result' => 'No se inserto registro',
+                    'method' => 'post'
                 );
             }
 

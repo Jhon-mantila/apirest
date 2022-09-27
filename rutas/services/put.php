@@ -45,10 +45,65 @@ if(isset($_GET["id"]) && isset($_GET["nameId"])){
 
    //echo '<pre>';print_r($data);echo '</pre>';
 
-   //Solicitamos respuesta del controlador para editar datos en cualquier tabla
+   //validar peticiones para usuarios autorizados
+   if(isset($_GET["token"])){
+   
+        $tableToken = $_GET['table'] ?? "clients";
+        $suffix = $_GET['suffix'] ?? "client";
+        //Verificar si el token no ha expirado devuelve : "vigente_token", "expiro_token", "no_existe_token"
+        $validate = Conexion::tokenValidate($_GET['token'], $tableToken, $suffix);
+    
+                        //Token valido
+                        if($validate == "vigente_token"){
+                            
+                            //Solicitamos respuesta del controlador para editar datos en cualquier tabla
+                            $response = new PutController();
+                            $response->putData($table, $data, $_GET['id'], $_GET['nameId']);
 
-   $response = new PutController();
-   $response->putData($table, $data, $_GET['id'], $_GET['nameId']);
+                        }
+
+                        //Error token expiro
+                        if($validate == "expiro_token"){
+                    
+                            $json = array(
+                                'status' => 303,
+                                'Results' => 'Error: the token has expired'
+                    
+                            );
+                    
+                            echo json_encode($json, http_response_code($json['status']));
+                    
+                            return; 
+                        
+                        }
+        
+                        //Error token no coincide en base de datos 
+                        if($validate == "no_existe_token"){
+                            
+                            $json = array(
+                                'status' => 400,
+                                'Results' => 'Error: the token not auth'
+                    
+                            );
+                    
+                            echo json_encode($json, http_response_code($json['status']));
+                    
+                            return; 
+        
+                        }
+    //Error no suministraron token 
+        }else{
+            
+            $json = array(
+                'status' => 400,
+                'Results' => 'Error: auth required'
+
+            );
+
+            echo json_encode($json, http_response_code($json['status']));
+
+            return; 
+    }
 }
 
 ?>

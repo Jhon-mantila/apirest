@@ -19,12 +19,16 @@ if(isset($_GET['linkTo']) && isset($_GET["equalTo"])){
     
     //validar peticiones para usuarios autorizados
     if(isset($_GET["token"])){
-   
+        //echo '<pre>';print_r($campo);echo '</pre>';
+        //echo '<pre>';print_r($value);echo '</pre>';
     $tableToken = $_GET['table'] ?? "clients";
     $suffix = $_GET['suffix'] ?? "client";
+    //echo '<pre>';print_r($_GET["token"]);echo '</pre>';
+    //echo '<pre>';print_r($_GET["table"]);echo '</pre>';
+    //echo '<pre>';print_r($_GET["suffix"]);echo '</pre>';
     //Verificar si el token no ha expirado devuelve : "vigente_token", "expiro_token", "no_existe_token"
     $validate = Conexion::tokenValidate($_GET['token'], $tableToken, $suffix);
-
+    
                     //Token valido
                     if($validate == "vigente_token"){
 
