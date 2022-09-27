@@ -23,9 +23,7 @@ class PutModel{
                 "Results" => "No existe el $id"
             );
             
-            $cadena = file_get_contents("C:/xampp/htdocs/apirest/php_error_log");
-            $cadena .= "\r\n".implode(",", $response);
-            file_put_contents("C:/xampp/htdocs/apirest/php_error_log", $cadena);
+            Conexion::logJsonControlados($response);
 
             return $response;
 
@@ -69,6 +67,7 @@ class PutModel{
                 "id"=> $id,
                 "Results" => "Not Fount"
             );
+            Conexion::logJsonControlados($response);
             return $response;
         }
 

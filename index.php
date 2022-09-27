@@ -6,8 +6,9 @@ use FTP\Connection;
 
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
-ini_set("error_log", "C:/xampp/htdocs/apirest/php_error_log");
+ini_set("error_log", __DIR__."/php_error_log");
 
+//C:/xampp/htdocs/apirest/php_error_log
 //CORS
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');

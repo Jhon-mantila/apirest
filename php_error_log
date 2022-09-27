@@ -1,4 +1,4 @@
-No existe el 5001
+[2022-09-27 04:40:35] 2022-09-27 04:39:38 No existe el 5001
 No existe el 5001
 No existe el 5001[26-Sep-2022 18:54:30 Europe/Berlin] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\apirest\controlador\post.cotroller.php on line 61
 [26-Sep-2022 18:56:36 Europe/Berlin] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\apirest\controlador\post.cotroller.php on line 61
@@ -51,4 +51,15 @@ Stack trace:
   thrown in C:\xampp\htdocs\apirest\modelos\post.model.php on line 39
 [27-Sep-2022 03:30:15 Europe/Berlin] PHP Notice:  Undefined index: suffix in C:\xampp\htdocs\apirest\rutas\services\get.php on line 28
 
-No existe el 5010
+No existe el 5010[27-Sep-2022 04:31:27 Europe/Berlin] PHP Warning:  file_get_contents(C:\xampp\htdocs\apirest\modelos/php_error_log): failed to open stream: No such file or directory in C:\xampp\htdocs\apirest\modelos\connection.php on line 135
+[27-Sep-2022 04:37:49 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$cadena' (T_VARIABLE), expecting ';' or ',' in C:\xampp\htdocs\apirest\modelos\connection.php on line 137
+
+No existe el 5011
+
+No existe el 5011
+
+No existe el 5011[2022-09-27 04:41:42] 
+
+No existe el 5011[2022-09-27 04:51:55] 
+
+400,Error Fields in the form do not match the database[2022-09-27 04:52:02] 

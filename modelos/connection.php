@@ -128,5 +128,14 @@ class Conexion{
 
         return;
     }
+
+    //registrar errores de json en el arhivo plano
+    static public function logJsonControlados($response){
+        
+        $cadena = file_get_contents($_SERVER['DOCUMENT_ROOT']."/php_error_log");
+        //echo '<pre>';print_r(__DIR__."\php_error_log");echo '</pre>';
+        $cadena .= "\r\n".implode(",", $response);
+        file_put_contents($_SERVER['DOCUMENT_ROOT']."/php_error_log", $cadena."[".date("Y-m-d H:i:s")."] "."\n");
+    }
 }
 ?>

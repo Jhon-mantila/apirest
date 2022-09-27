@@ -110,12 +110,14 @@ class PostController{
                     'status' => 400,
                     'result' => $error
                 );
+                Conexion::logJsonControlados($json);
             }else{
                 $json = array(
                     'status' => 404,
                     'result' => 'No se inserto registro',
                     'method' => 'post'
                 );
+                Conexion::logJsonControlados($json);
             }
 
         }

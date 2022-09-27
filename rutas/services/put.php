@@ -37,7 +37,7 @@ if(isset($_GET["id"]) && isset($_GET["nameId"])){
         'status' => 400,
         'results' => 'Error Fields in the form do not match the database',
     );
-
+    Conexion::logJsonControlados($json);
     echo json_encode($json, http_response_code($json["status"]));
 
     return;

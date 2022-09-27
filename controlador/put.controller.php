@@ -1,5 +1,6 @@
 <?php
 require_once "modelos/put.model.php";
+require_once "modelos/connection.php";
 
 class PutController{
         //Peticion put 
@@ -32,6 +33,7 @@ class PutController{
                     'result' => 'No se encontraron resultados',
                     'method' => 'put'
                 );
+                Conexion::logJsonControlados($json);
             }
     
             echo json_encode($json, http_response_code($json["status"]));

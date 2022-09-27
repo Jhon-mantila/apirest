@@ -1,6 +1,6 @@
 <?php
 require_once 'modelos/get.model.php';
-
+require_once 'modelos/connection.php';
 class GetController{
 
     static public function getData($table, $select){
@@ -50,6 +50,8 @@ class GetController{
                 'result' => 'No se encontraron resultados',
                 'method' => 'get'
             );
+
+            Conexion::logJsonControlados($json);
         }
 
         echo json_encode($json, http_response_code($json["status"]));

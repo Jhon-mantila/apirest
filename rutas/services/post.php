@@ -23,7 +23,7 @@ if(isset($_POST)){
             'Results' => 'Error Fields in the form do not match the database'
 
         );
-
+        Conexion::logJsonControlados($json);
         echo json_encode($json, http_response_code($json['status']));
 
         return;
