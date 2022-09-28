@@ -12,7 +12,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{endpoint}}/files?select=id_file,departament_file, name_file&linkTo=name_file,id_file&equalTo=Jorge Eliecer Coral Rivas_2&token&table",
+					"raw": "{{endpoint}}/files?select=id_file,departament_file, name_file&linkTo=name_file,id_file&equalTo=Jorge Eliecer Coral Rivas,2&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyNDEzODcsImV4cCI6MTY2NDMyNzc4NywiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6Implc3Npa2FAY29ycmVvLmNvbSJ9fQ.uklnYYNRRxYoOisDXDIcwuTgvlGA-p-IUSdVqiikEBY&table=clients&suffix=client",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -30,15 +30,19 @@
 						},
 						{
 							"key": "equalTo",
-							"value": "Jorge Eliecer Coral Rivas_2"
+							"value": "Jorge Eliecer Coral Rivas,2"
 						},
 						{
 							"key": "token",
-							"value": null
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyNDEzODcsImV4cCI6MTY2NDMyNzc4NywiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6Implc3Npa2FAY29ycmVvLmNvbSJ9fQ.uklnYYNRRxYoOisDXDIcwuTgvlGA-p-IUSdVqiikEBY"
 						},
 						{
 							"key": "table",
-							"value": null
+							"value": "clients"
+						},
+						{
+							"key": "suffix",
+							"value": "client"
 						}
 					]
 				}
@@ -51,7 +55,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{endpoint}}/files?select=name_file,type_person_type,type_file,departament_file,city_file&name=Oneida Rayeth Pinto Perez&porcentaje=55&token&table",
+					"raw": "{{endpoint}}/files?select=name_file,type_person_type,type_file,departament_file,city_file&name=Oneida Rayeth Pinto Perez&porcentaje=55&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQzMjc2MjksImV4cCI6MTY2NDQxNDAyOSwiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6Implc3Npa2FAY29ycmVvLmNvbSJ9fQ.qGqHRDXFGRhEqrmWDwihdo9ecoEaoHL4VhGrhBXN_D8&table=clients&suffix=client",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -73,11 +77,15 @@
 						},
 						{
 							"key": "token",
-							"value": null
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQzMjc2MjksImV4cCI6MTY2NDQxNDAyOSwiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6Implc3Npa2FAY29ycmVvLmNvbSJ9fQ.qGqHRDXFGRhEqrmWDwihdo9ecoEaoHL4VhGrhBXN_D8"
 						},
 						{
 							"key": "table",
-							"value": null
+							"value": "clients"
+						},
+						{
+							"key": "suffix",
+							"value": "client"
 						}
 					]
 				}
@@ -121,33 +129,37 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{endpoint}}/files?select=id_file,departament_file, name_file&linkTo=name_file&equalTo=Jorge Eliecer Coral Rivas&token&table",
+					"raw": "{{endpoint}}/logs?select=id_log,response_log,name_porcentaje_log&linkTo=id_log&equalTo=8&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQzMzE1ODEsImV4cCI6MTY2NDQxNzk4MSwiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6Implc3Npa2FAY29ycmVvLmNvbSJ9fQ.1u0D2KL3KdHaFRpn0Fopy0zYB34TJkSAukD71quBXns&table=clients&suffix=client",
 					"host": [
 						"{{endpoint}}"
 					],
 					"path": [
-						"files"
+						"logs"
 					],
 					"query": [
 						{
 							"key": "select",
-							"value": "id_file,departament_file, name_file"
+							"value": "id_log,response_log,name_porcentaje_log"
 						},
 						{
 							"key": "linkTo",
-							"value": "name_file"
+							"value": "id_log"
 						},
 						{
 							"key": "equalTo",
-							"value": "Jorge Eliecer Coral Rivas"
+							"value": "8"
 						},
 						{
 							"key": "token",
-							"value": null
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQzMzE1ODEsImV4cCI6MTY2NDQxNzk4MSwiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6Implc3Npa2FAY29ycmVvLmNvbSJ9fQ.1u0D2KL3KdHaFRpn0Fopy0zYB34TJkSAukD71quBXns"
 						},
 						{
 							"key": "table",
-							"value": null
+							"value": "clients"
+						},
+						{
+							"key": "suffix",
+							"value": "client"
 						}
 					]
 				}
@@ -164,17 +176,17 @@
 					"urlencoded": [
 						{
 							"key": "email_client",
-							"value": "jessika@correo.com",
+							"value": "daniela3@correo.com",
 							"type": "text"
 						},
 						{
 							"key": "password_client",
-							"value": "1234",
+							"value": "123456",
 							"type": "text"
 						},
 						{
 							"key": "name_client",
-							"value": "jessika karime vallejo",
+							"value": "Daniela Lucia mantilla",
 							"type": "text"
 						},
 						{
@@ -232,7 +244,7 @@
 					]
 				},
 				"url": {
-					"raw": "{{endpoint}}/clients?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyMjU5OTMsImV4cCI6MTY2NDMxMjM5MywiZGF0YSI6eyJpZCI6IjE0IiwiZW1haWwiOiJqZXNzaWthQGNvcnJlby5jb20ifX0.zKy0Dn69LyFtjIuWd_uSD27ThxcJsKgeDObwfQUKcS0&table=clients&suffix=client",
+					"raw": "{{endpoint}}/clients?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyMzcyNjQsImV4cCI6MTY2NDMyMzY2NCwiZGF0YSI6eyJpZCI6IjE0IiwiZW1haWwiOiJqZXNzaWthQGNvcnJlby5jb20ifX0.V_Px4uyNVxNV_GhkfiEfPBFETWPpdu3IUjqMX4abokU&table=clients&suffix=client",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -242,7 +254,132 @@
 					"query": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyMjU5OTMsImV4cCI6MTY2NDMxMjM5MywiZGF0YSI6eyJpZCI6IjE0IiwiZW1haWwiOiJqZXNzaWthQGNvcnJlby5jb20ifX0.zKy0Dn69LyFtjIuWd_uSD27ThxcJsKgeDObwfQUKcS0"
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyMzcyNjQsImV4cCI6MTY2NDMyMzY2NCwiZGF0YSI6eyJpZCI6IjE0IiwiZW1haWwiOiJqZXNzaWthQGNvcnJlby5jb20ifX0.V_Px4uyNVxNV_GhkfiEfPBFETWPpdu3IUjqMX4abokU"
+						},
+						{
+							"key": "table",
+							"value": "clients"
+						},
+						{
+							"key": "suffix",
+							"value": "client"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST-insertar registros files",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "departament_file",
+							"value": "Santander",
+							"type": "text"
+						},
+						{
+							"key": "location_file",
+							"value": "Casa",
+							"type": "text"
+						},
+						{
+							"key": "city_file",
+							"value": "Barrancabermeja",
+							"type": "text"
+						},
+						{
+							"key": "name_file",
+							"value": "jhon edinson mantilla ruiz",
+							"type": "text"
+						},
+						{
+							"key": "type_person_type",
+							"value": "Aspirante",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/files?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyNDEzODcsImV4cCI6MTY2NDMyNzc4NywiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6Implc3Npa2FAY29ycmVvLmNvbSJ9fQ.uklnYYNRRxYoOisDXDIcwuTgvlGA-p-IUSdVqiikEBY&table=clients&suffix=client",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"files"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyNDEzODcsImV4cCI6MTY2NDMyNzc4NywiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6Implc3Npa2FAY29ycmVvLmNvbSJ9fQ.uklnYYNRRxYoOisDXDIcwuTgvlGA-p-IUSdVqiikEBY"
+						},
+						{
+							"key": "table",
+							"value": "clients"
+						},
+						{
+							"key": "suffix",
+							"value": "client"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST-insertar logs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "response_log ",
+							"value": "{\n    \"status\": 200,\n    \"total\": 5,\n    \"result\": [\n        {\n            \"nombre\": \"Oneida Rayeth Pinto Perez\",\n            \"tipo_persona\": \"NO APLICA\",\n            \"tipo_cargo\": \"POLITICO\",\n            \"departamento\": \"LA_GUAJIRA\",\n            \"municipio\": \"Medellín\",\n            \"porcentaje\": 100\n        },\n        {\n            \"nombre\": \"Seonedis Leonor Perez\",\n            \"tipo_persona\": \"PREFERENTE\",\n            \"tipo_cargo\": \"POLITICO\",\n            \"departamento\": \"LA_GUAJIRA\",\n            \"municipio\": \"ALBANIA\",\n            \"porcentaje\": 56.52173913043478\n        },\n        {\n            \"nombre\": \"Angela Janeth Giron Neira\",\n            \"tipo_persona\": \"PREFERENTE\",\n            \"tipo_cargo\": \"POLITICO\",\n            \"departamento\": \"BOGOTA D.C.\",\n            \"municipio\": \"BOGOTA._D.C.\",\n            \"porcentaje\": 56\n        },\n        {\n            \"nombre\": \"Heder Ladino Perez\",\n            \"tipo_persona\": \"PREFERENTE\",\n            \"tipo_cargo\": \"OTRO\",\n            \"departamento\": \"HUILA\",\n            \"municipio\": \"TERUEL\",\n            \"porcentaje\": 55.81395348837209\n        },\n        {\n            \"nombre\": \"Jose Trinidad Rios Perez\",\n            \"tipo_persona\": \"PREFERENTE\",\n            \"tipo_cargo\": \"OTRO\",\n            \"departamento\": \"ARAUCA\",\n            \"municipio\": \"SARAVENA\",\n            \"porcentaje\": 57.142857142857146\n        }\n    ]\n}",
+							"type": "text"
+						},
+						{
+							"key": "date_created_log",
+							"value": "2022-09-27",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/logs?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQzMjc2MjksImV4cCI6MTY2NDQxNDAyOSwiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6Implc3Npa2FAY29ycmVvLmNvbSJ9fQ.qGqHRDXFGRhEqrmWDwihdo9ecoEaoHL4VhGrhBXN_D8&table=clients&suffix=client",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"logs"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQzMjc2MjksImV4cCI6MTY2NDQxNDAyOSwiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6Implc3Npa2FAY29ycmVvLmNvbSJ9fQ.qGqHRDXFGRhEqrmWDwihdo9ecoEaoHL4VhGrhBXN_D8"
 						},
 						{
 							"key": "table",
@@ -266,7 +403,7 @@
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
-							"key": "city_file",
+							"key": "city_fil",
 							"value": "Medellín",
 							"type": "text"
 						},
@@ -278,7 +415,7 @@
 					]
 				},
 				"url": {
-					"raw": "{{endpoint}}/files?id=1&nameId=id_file&token&table",
+					"raw": "{{endpoint}}/files?id=5011&nameId=id_file&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyNDEzODcsImV4cCI6MTY2NDMyNzc4NywiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6Implc3Npa2FAY29ycmVvLmNvbSJ9fQ.uklnYYNRRxYoOisDXDIcwuTgvlGA-p-IUSdVqiikEBY&table=clients&suffix=client",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -288,7 +425,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "1"
+							"value": "5011"
 						},
 						{
 							"key": "nameId",
@@ -296,11 +433,15 @@
 						},
 						{
 							"key": "token",
-							"value": null
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyNDEzODcsImV4cCI6MTY2NDMyNzc4NywiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6Implc3Npa2FAY29ycmVvLmNvbSJ9fQ.uklnYYNRRxYoOisDXDIcwuTgvlGA-p-IUSdVqiikEBY"
 						},
 						{
 							"key": "table",
-							"value": null
+							"value": "clients"
+						},
+						{
+							"key": "suffix",
+							"value": "client"
 						}
 					]
 				}
