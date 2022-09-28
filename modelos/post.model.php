@@ -18,6 +18,7 @@ class PostModel{
         $param = substr($param, 0, -1);
         //echo '<pre>';print_r($column);echo '</pre>';
         //echo '<pre>';print_r($param);echo '</pre>';
+        
         //$id = "id_$suffix";
         //$uuid = "uuid()";
         $sql = "INSERT INTO $table ($column) VALUES($param)";
@@ -27,9 +28,12 @@ class PostModel{
 
         foreach($data as $key => $value){
             $stmt->bindParam(":".$key, $data[$key], PDO::PARAM_STR);
+            
+            //echo '<pre>';print_r($data[$key]);echo '</pre>';
         }
         
         
+        //return;
         if($stmt->execute()){
          
             $response = array(

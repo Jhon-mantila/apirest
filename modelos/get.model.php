@@ -60,6 +60,17 @@ class GetModel{
                 
         }
         //echo '<pre>';print_r($return);echo '</pre>';
+        //return;
+        //capturar logs en base de datos por consulta.
+        $log = array(
+            "response_log"=>print_r($return, true),
+            "name_porcentaje_log"=> $name ." | ". $porcentaje,
+            "date_created_log"=>date("Y-m-d H:i:s")
+            );
+           
+        Conexion::logRegister('logs', $log, null);
+
+        //echo '<pre>';print_r($return);echo '</pre>';
         return $return;
     }
 

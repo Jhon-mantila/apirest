@@ -1,5 +1,6 @@
 <?php
 require_once "modelos/get.model.php";
+require_once "modelos/post.model.php";
 //require_once "vendor/autoload.php";
 //use Firebase\JWT\JWT;
 
@@ -129,6 +130,10 @@ class Conexion{
         return;
     }
 
+    static public function logRegister($table, $response, $suffix){
+
+        $insert = PostModel::postData($table, $response, $suffix);
+    }
     //registrar errores de json en el arhivo plano
     static public function logJsonControlados($response){
         

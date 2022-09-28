@@ -60,7 +60,9 @@ if(isset($_POST)){
                     //Peticones crear registro cualquier tabla
                     $response->postData($table, $_POST, $suffix);
                 
-                
+                    //echo '<pre>';print_r($_POST);echo '</pre>';
+
+                    //return;
                 }
 
                 //Error token expiro

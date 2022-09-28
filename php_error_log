@@ -63,3 +63,22 @@ No existe el 5011[2022-09-27 04:41:42]
 No existe el 5011[2022-09-27 04:51:55] 
 
 400,Error Fields in the form do not match the database[2022-09-27 04:52:02] 
+
+404,0,No se encontraron resultados,get[2022-09-28 03:22:25] 
+
+400,Error Fields in the form do not match the database[2022-09-28 03:39:57] 
+
+404,No se inserto registro,post[2022-09-28 03:44:13] 
+
+404,No se inserto registro,post[2022-09-28 03:46:07] 
+
+404,No se inserto registro,post[2022-09-28 03:46:17] 
+
+404,No se inserto registro,post[2022-09-28 03:46:41] 
+
+404,No se inserto registro,post[2022-09-28 03:47:09] 
+
+404,No se inserto registro,post[2022-09-28 03:49:11] 
+[28-Sep-2022 03:59:07 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\apirest\modelos\post.model.php on line 30
+
+404,0,No se encontraron resultados,get[2022-09-28 04:01:52] 
