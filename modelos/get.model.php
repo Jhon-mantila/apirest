@@ -32,7 +32,7 @@ class GetModel{
         
         foreach($stmt->fetchAll() as $row){
             //echo '<pre>';print_r($row['name_file']);echo '</pre>';
-            similar_text($name, $row['name_file'], $percent);
+            similar_text(strtolower($name), strtolower($row['name_file']), $percent);
 
             //echo '<pre>';print_r($percent);echo '</pre>';
             $response[] = array(
