@@ -5,14 +5,15 @@ if(isset($_POST['submit']))
  
 {
  
-$name = $_POST['name'];
+$name = htmlentities(addslashes($_POST['name']));
 $porcentaje = $_POST['porcentaje'];
 //echo $name . "  " . $porcentaje;
 
 $buscar = new Consumo();
 $result_decode = $buscar->getConsumo($name, $porcentaje);
 //echo '<pre>'; echo print_r($result_decode, true);
-//echo $result_decode->total; 
+$total = $result_decode->total;
+//echo $total; 
 }
 ?>
 <html lang="en">
@@ -43,12 +44,18 @@ $result_decode = $buscar->getConsumo($name, $porcentaje);
             <input type="submit" name="submit" class="btn btn-primary mb-2" value="Buscar"><br>
         
         </form>
+        
+        <?php if($total == 0){ ?>
+            <div class="alert alert-warning mx-sm-5 mb-2" role="alert">No encontro registros</div>
+        <?php } ?> 
 
     </div>
+    <br><br>
+    <?php if($total != 0){ ?>
+
     <div class="row justify-content-center">   
-        <br>
-        <?php if($result_decode->total != 0){ ?>
-            
+        
+
             <table id="example" class="table table-striped table-bordered table-hover" style="width: 100%;">
                 <thead>
                     <tr>
@@ -68,33 +75,26 @@ $result_decode = $buscar->getConsumo($name, $porcentaje);
                             <td><?php  echo $item->tipo_cargo?></td>
                             <td><?php  echo $item->departamento?></td>
                             <td><?php  echo $item->municipio?></td>
-                            <td><?php  echo (int)$item->porcentaje?></td>
+                            <td><?php  echo (int)$item->porcentaje . " %"?></td>
                     </tr>
                     <?php  } ?>
                 </tbody>
             </table>
-            
-        <?php }else{ ?>
-        
-            <div class="alert alert-warning mx-sm-5 mb-2" role="alert">No encontro registros</div>
-        
-        <?php } ?> 
+    </div> 
+
+    <?php } ?> 
+      
+
        
-    </div>    
+        
 </div>    
     
      <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    
-    
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js" type="text/javascript"></script>
     </body>
     <script>
-       /* $(document).ready(function () {
-            $('#example').DataTable();
-        });*/
-
         $(document).ready( function () {
         $('#example').dataTable( {
             "bAutoWidth": false
